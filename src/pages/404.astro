@@ -1,0 +1,15 @@
+---
+import TextButton from "../components/TextButton.astro";
+import Default from "../layouts/Default.astro";
+---
+
+<Default title="404">
+  <div class="flex flex-col items-center gap-4">
+    <span style="font-size: 5rem" class="font-bold font-round">404</span>
+    <span class="flex flex-row gap-2 items-center">
+      <span class="px-4"> Page not found </span>
+      <span>&bull;</span>
+      <TextButton text="Back to home" href="/" />
+    </span>
+  </div>
+</Default>

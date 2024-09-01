@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8.2020845mm"
+   height="8.2020884mm"
+   viewBox="0 0 8.2020845 8.2020884"
+   version="1.1"
+   id="svg9694"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9691" />
+  <g
+     id="layer1">
+    <path
+       id="rect7845-1"
+       style="font-variation-settings:normal;fill:#0ba84d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.285726;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       d="M 3.9687517,0.26458873 1.7443848e-6,4.2333387 v 3.96875 L 3.9687517,4.2333387 Z m 0,3.96874997 v 3.96875 h 3.96875 v -3.96875 z" />
+    <path
+       id="path9191"
+       style="font-variation-settings:normal;fill:#2c5df8;fill-opacity:1;fill-rule:evenodd;stroke-width:0.285726;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       d="M 1.7443848e-6,0.26458873 V 4.2333387 L 3.9687517,0.26458873 Z M 3.9687517,4.2333387 1.7443848e-6,8.2020887 H 3.9687517 Z" />
+    <path
+       id="path8842"
+       style="font-variation-settings:normal;fill:#842cf8;fill-opacity:1;fill-rule:evenodd;stroke-width:0.304775;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       d="M 7.5819677,0.62012873 4.5888687,3.6132287 a 2.116668,2.1166668 0 0 0 1.496549,0.62011 2.116668,2.1166668 0 0 0 2.116667,-2.11666 2.116668,2.1166668 0 0 0 -0.620117,-1.49654997 z" />
+    <path
+       id="path7903-9-5"
+       style="font-variation-settings:normal;fill:#f82c67;fill-opacity:1;fill-rule:evenodd;stroke-width:0.304775;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       d="M 6.0854187,8.7304687e-6 A 2.116668,2.1166668 0 0 0 3.9687517,2.1166787 a 2.116668,2.1166668 0 0 0 0.621151,1.49551 L 7.5819677,0.62012873 A 2.116668,2.1166668 0 0 0 6.0854187,8.7304687e-6 Z" />
+  </g>
+</svg>
