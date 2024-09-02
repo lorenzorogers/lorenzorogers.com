@@ -1,0 +1,21 @@
+---
+import TextButton from "../components/TextButton.astro";
+import Default from "../layouts/Default.astro";
+---
+
+<Default title="Projects">
+  <div class="flex flex-col gap-12 py-12">
+    <span class="text-6xl font-bold font-round"
+      >here are some <t class="text-lor-teal">projects</t> I've made.</span
+    >
+    <span class="flex flex-row gap-2 items-center h-6"
+      >While all I have to offer right now are a couple old ones, I hope to
+      create some new ones very soon.
+    </span>
+    <TextButton
+      class="border"
+      text="Some old past projects"
+      to="https://projects.lorenzorogers.com"
+    />
+  </div>
+</Default>

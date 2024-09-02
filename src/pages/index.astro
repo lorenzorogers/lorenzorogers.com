@@ -1,0 +1,16 @@
+---
+import TextButton from "../components/TextButton.astro";
+import Default from "../layouts/Default.astro";
+---
+
+<Default title="Home">
+  <div class="flex flex-col gap-12 py-12">
+    <span class="text-6xl font-bold font-round"
+      >hello. I make <t class="text-lor-teal">stuff</t>.</span
+    >
+    <span class="flex flex-row gap-2 items-center h-6"
+      >I'll populate this page as I actually make things.
+    </span>
+    <TextButton class="border" text="Projects" to="/projects" />
+  </div>
+</Default>
