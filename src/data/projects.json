@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Maple",
+    "description": "Fun things made in my free time. Enjoy!",
+    "icon": "/img/icons/maple.svg",
+    "links": [
+      {
+        "name": "Visit",
+        "to": "https://maple.lorenzorogers.com/"
+      }
+    ]
+  }
+]

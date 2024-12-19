@@ -1,6 +1,19 @@
 ---
 import TextButton from "../components/TextButton.astro";
 import Default from "../layouts/Default.astro";
+import projects from "../data/projects.json";
+import { ArrowUpRight } from "lucide-astro";
+
+type Project = {
+  name: string;
+  description: string;
+  icon: string;
+  links: Link[];
+};
+type Link = {
+  name: string;
+  to: string;
+};
 ---
 
 <Default title="Projects">
@@ -9,9 +22,36 @@ import Default from "../layouts/Default.astro";
       >here are some <t class="text-lor-teal">projects</t> I've made.</span
     >
     <span class="flex flex-row gap-2 items-center h-6"
-      >While all I have to offer right now are a couple old ones, I hope to
-      create some new ones very soon.
+      >The things I make in my free time. Enjoy!
     </span>
+    <div class="flex flex-col gap-4">
+      {
+        projects.map((project: Project) => (
+          <div class="border rounded-3xl p-4 flex flex-col gap-4">
+            <span class="flex flex-row gap-4 items-center">
+              <img class="w-12 h-12" src={project.icon} />
+              <span class="font-round text-4xl font-extrabold">
+                {project.name}
+              </span>
+            </span>
+            <span class="text-lg">{project.description}</span>
+            <span class="flex flex-row gap-2 items-center">
+              {project.links.map((link: Link) => (
+                <a
+                  target="_blank"
+                  class="border flex flex-row gap-1 items-center p-2 rounded-xl"
+                  href={link.to}
+                >
+                  {link.name}
+                  <ArrowUpRight />
+                </a>
+              ))}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+    <span>Plus: A bonus! Some really old stuff from over two years ago!</span>
     <TextButton
       class="border"
       text="Some old past projects"
