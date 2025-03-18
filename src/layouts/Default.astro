@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Logo from "../components/Logo.astro";
 import TextButton from "../components/TextButton.astro";
 import { Mail, MapPin, Github, Bird } from "lucide-astro";
+import NavTextButton from "../components/NavTextButton.astro";
 interface Props {
   title: string;
 }
@@ -62,7 +63,8 @@ const { title } = Astro.props;
           <a href="/"><Logo /></a>
         </div>
         <div class="w-full flex gap-4 items-center justify-center flex-row">
-          <TextButton text="Projects" to="/projects" />
+          <NavTextButton text="Projects" to="/projects" />
+          <NavTextButton text="Words" to="/words" />
         </div>
         <div class="w-full flex gap-4 items-center justify-end flex-row">
           <div

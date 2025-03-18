@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import Default from "../../layouts/Default.astro";
+
+const posts = await getCollection("blog");
+---
+
+<Default title="Words">
+  <div class="flex flex-col gap-12 py-12">
+    <span class="text-6xl font-bold font-round"
+      >some <t class="text-lor-teal">words</t>.</span
+    >
+    <span class="flex flex-row gap-2 items-center h-6"
+      >(Or a blog, if you'd like.)
+    </span>
+  </div>
+  <div class="flex flex-col gap-4">
+    {
+      posts.map((post) => (
+        <div class="border rounded-3xl p-4 flex flex-col gap-4">
+          <h1>{post.data.title}</h1>
+          <span class="text-sm italic">{post.data.published}</span>
+        </div>
+      ))
+    }
+  </div>
+</Default>

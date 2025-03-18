@@ -1,6 +1,7 @@
 [
   {
     "name": "Maple",
+    "slug": "maple",
     "description": "Fun things made in my free time. Enjoy!",
     "icon": "/img/icons/maple.svg",
     "links": [
