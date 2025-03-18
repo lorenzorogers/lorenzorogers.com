@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Default from "../../layouts/Default.astro";
+import { formatDate } from "../../lib/format";
 
 const posts = await getCollection("blog");
 ---
@@ -16,12 +17,51 @@ const posts = await getCollection("blog");
   </div>
   <div class="flex flex-col gap-4">
     {
-      posts.map((post) => (
-        <div class="border rounded-3xl p-4 flex flex-col gap-4">
-          <h1>{post.data.title}</h1>
-          <span class="text-sm italic">{post.data.published}</span>
-        </div>
-      ))
+      posts
+        .filter(
+          (post) =>
+            !post.data.hidden || (post.data.hidden && !import.meta.env.PROD)
+        )
+        .map((post) => (
+          <div class="border rounded-3xl flex flex-row items-center overflow-hidden">
+            <div
+              class={[
+                "flex border-l-4 flex-col gap-2 p-4",
+                post.data.hidden ? "border-l-lor-red" : "border-l-lor-teal",
+              ].join(" ")}
+            >
+              <div class="flex flex-col">
+                <span class="text-sm italic">
+                  {formatDate(post.data.published, "long")}
+                </span>
+                <h1>
+                  <a href={`/words/post/${post.data.slug}`}>
+                    {post.data.title}
+                  </a>
+                </h1>
+              </div>
+              <p>{post.data.summary}</p>
+              {post.data.authors.length > 0 && (
+                <div class="flex flex-row flex-wrap items-center gap-2">
+                  by
+                  {post.data.authors.map((author) => (
+                    <a
+                      class="py-2 px-4 rounded-full bg-lor-bg-2 font-extrabold border"
+                      href={author.url}
+                    >
+                      {author.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ))
+    }
+    {
+      posts.filter((post) => !post.data.hidden).length < 1 && (
+        <span>Check back to see if any new posts are written.</span>
+      )
     }
   </div>
 </Default>
