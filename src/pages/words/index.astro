@@ -20,7 +20,7 @@ const posts = await getCollection("blog");
       posts
         .filter(
           (post) =>
-            !post.data.hidden || (post.data.hidden && !import.meta.env.PROD)
+            !post.data.hidden || (post.data.hidden && import.meta.env.DEV)
         )
         .map((post) => (
           <div class="border rounded-3xl flex flex-row items-center overflow-hidden">
