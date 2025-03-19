@@ -5,8 +5,8 @@ const { text, to, class: className } = Astro.props;
 <a
   href={to}
   class={[
-    className +
-      `w-fit cursor-pointer flex items-center justify-center rounded-xl hover:bg-lor-bg-transparent transition p-2 px-4`,
+    className ?? "",
+    "w-fit cursor-pointer flex items-center justify-center rounded-xl hover:bg-lor-bg-transparent transition p-2 px-4",
   ].join(" ")}
 >
   {text}
